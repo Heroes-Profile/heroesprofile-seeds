@@ -14,24 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `season_game_versions`
---
 
-DROP TABLE IF EXISTS `season_game_versions`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `season_game_versions` (
-  `season` int(11) NOT NULL,
-  `game_version` varchar(45) NOT NULL,
-  `date_added` datetime DEFAULT NULL,
-  PRIMARY KEY (`season`,`game_version`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `season_game_versions`
---
 
 LOCK TABLES `season_game_versions` WRITE;
 /*!40000 ALTER TABLE `season_game_versions` DISABLE KEYS */;

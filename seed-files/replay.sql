@@ -14,42 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `replay`
---
 
-DROP TABLE IF EXISTS `replay`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `replay` (
-  `replayID` int(11) unsigned NOT NULL,
-  `parsed_id` int(11) DEFAULT NULL,
-  `game_type` tinyint(3) unsigned NOT NULL,
-  `game_date` datetime NOT NULL,
-  `game_length` smallint(5) unsigned NOT NULL,
-  `game_map` tinyint(3) unsigned NOT NULL,
-  `game_version` varchar(32) CHARACTER SET utf8mb4 NOT NULL,
-  `region` tinyint(3) unsigned NOT NULL,
-  `date_added` datetime NOT NULL,
-  `mmr_ran` tinyint(4) DEFAULT '0',
-  PRIMARY KEY (`replayID`),
-  KEY `replayID_Region_GameDate` (`replayID`,`region`,`game_date`),
-  KEY `region` (`region`),
-  KEY `game_date` (`game_date`),
-  KEY `parsed_id` (`parsed_id`),
-  KEY `region_gameType` (`region`,`game_type`),
-  KEY `replayID_gameType_gameDate` (`replayID`,`game_type`,`game_date`),
-  KEY `replayID_Region_GameType` (`replayID`,`region`,`game_type`,`game_date`),
-  KEY `mmr_ran_gameDate` (`mmr_ran`,`game_date`),
-  KEY `1` (`replayID`,`region`,`game_type`,`game_map`,`game_date`),
-  KEY `replayID_gameVersion` (`replayID`,`game_version`),
-  KEY `gameversion` (`game_version`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `replay`
---
 
 LOCK TABLES `replay` WRITE;
 /*!40000 ALTER TABLE `replay` DISABLE KEYS */;

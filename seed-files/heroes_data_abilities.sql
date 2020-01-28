@@ -14,33 +14,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `heroes_data_abilities`
---
-
-DROP TABLE IF EXISTS `heroes_data_abilities`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `heroes_data_abilities` (
-  `hero_name` varchar(100) NOT NULL,
-  `short_name` varchar(100) NOT NULL,
-  `attribute_id` varchar(10) NOT NULL,
-  `title` varchar(50) NOT NULL,
-  `description` varchar(500) NOT NULL,
-  `mana_cost` varchar(10) NOT NULL,
-  `cooldown` varchar(10) NOT NULL,
-  `trait` varchar(5) NOT NULL,
-  `name` varchar(5) NOT NULL,
-  `hotkey` varchar(5) NOT NULL,
-  `icon` varchar(500) NOT NULL,
-  UNIQUE KEY `name` (`hero_name`,`title`),
-  KEY `attribute_id` (`attribute_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `heroes_data_abilities`
---
 
 LOCK TABLES `heroes_data_abilities` WRITE;
 /*!40000 ALTER TABLE `heroes_data_abilities` DISABLE KEYS */;

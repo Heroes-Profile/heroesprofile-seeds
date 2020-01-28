@@ -14,45 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `player`
---
 
-DROP TABLE IF EXISTS `player`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `player` (
-  `replayID` int(10) unsigned NOT NULL,
-  `blizz_id` int(11) unsigned NOT NULL,
-  `battletag` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
-  `hero` tinyint(3) unsigned NOT NULL,
-  `hero_level` smallint(6) unsigned NOT NULL,
-  `mastery_taunt` smallint(6) unsigned DEFAULT NULL,
-  `team` tinyint(4) unsigned NOT NULL,
-  `winner` tinyint(3) unsigned NOT NULL,
-  `party` varchar(45) DEFAULT NULL,
-  `player_conservative_rating` double DEFAULT NULL,
-  `player_mean` double DEFAULT NULL,
-  `player_standard_deviation` double DEFAULT NULL,
-  `hero_conservative_rating` double DEFAULT NULL,
-  `hero_mean` double DEFAULT NULL,
-  `hero_standard_deviation` double DEFAULT NULL,
-  `role_conservative_rating` double DEFAULT NULL,
-  `role_mean` double DEFAULT NULL,
-  `role_standard_deviation` double DEFAULT NULL,
-  `mmr_date_parsed` datetime DEFAULT NULL,
-  PRIMARY KEY (`replayID`,`battletag`,`hero`),
-  KEY `replayID_blizzID_Hero` (`replayID`,`blizz_id`,`hero`),
-  KEY `blizzID_hero` (`blizz_id`,`hero`),
-  KEY `replayID_hero_ConservativeRating` (`replayID`,`hero`,`player_conservative_rating`),
-  KEY `hero_conservativeratinbg` (`hero`,`player_conservative_rating`),
-  KEY `replayID_blizzID_mmrDate` (`replayID`,`blizz_id`,`mmr_date_parsed`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `player`
---
 
 LOCK TABLES `player` WRITE;
 /*!40000 ALTER TABLE `player` DISABLE KEYS */;

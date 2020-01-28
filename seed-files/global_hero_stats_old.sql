@@ -14,26 +14,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `global_hero_stats_old`
---
-
-DROP TABLE IF EXISTS `global_hero_stats_old`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `global_hero_stats_old` (
-  `game_version` varchar(45) NOT NULL,
-  `game_type` tinyint(4) NOT NULL,
-  `hero` tinyint(4) NOT NULL,
-  `win_loss` tinyint(4) NOT NULL,
-  `games_played` int(11) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`game_version`,`game_type`,`hero`,`win_loss`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `global_hero_stats_old`
---
 
 LOCK TABLES `global_hero_stats_old` WRITE;
 /*!40000 ALTER TABLE `global_hero_stats_old` DISABLE KEYS */;

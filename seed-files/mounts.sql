@@ -14,31 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `mounts`
---
 
-DROP TABLE IF EXISTS `mounts`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `mounts` (
-  `mount_id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) DEFAULT NULL,
-  `hyperlink_id` varchar(255) DEFAULT NULL,
-  `attribute_id` varchar(45) DEFAULT NULL,
-  `rarity` varchar(45) DEFAULT NULL,
-  `type` varchar(45) DEFAULT NULL,
-  `category` varchar(45) DEFAULT NULL,
-  `release_date` datetime DEFAULT NULL,
-  PRIMARY KEY (`mount_id`),
-  KEY `title` (`title`),
-  KEY `attribute_id` (`attribute_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=666 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `mounts`
---
 
 LOCK TABLES `mounts` WRITE;
 /*!40000 ALTER TABLE `mounts` DISABLE KEYS */;

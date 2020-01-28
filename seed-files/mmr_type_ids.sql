@@ -14,23 +14,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `mmr_type_ids`
---
-
-DROP TABLE IF EXISTS `mmr_type_ids`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `mmr_type_ids` (
-  `mmr_type_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) CHARACTER SET latin1 NOT NULL,
-  PRIMARY KEY (`mmr_type_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=100006 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `mmr_type_ids`
---
 
 LOCK TABLES `mmr_type_ids` WRITE;
 /*!40000 ALTER TABLE `mmr_type_ids` DISABLE KEYS */;

@@ -14,63 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `scores`
---
 
-DROP TABLE IF EXISTS `scores`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `scores` (
-  `replayID` int(11) unsigned NOT NULL,
-  `battletag` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
-  `level` int(10) DEFAULT NULL,
-  `kills` int(10) DEFAULT NULL,
-  `assists` int(10) DEFAULT NULL,
-  `takedowns` int(10) DEFAULT NULL,
-  `deaths` int(10) DEFAULT NULL,
-  `highest_kill_streak` int(10) DEFAULT NULL,
-  `hero_damage` int(10) DEFAULT NULL,
-  `siege_damage` int(10) DEFAULT NULL,
-  `structure_damage` int(10) DEFAULT NULL,
-  `minion_damage` int(10) DEFAULT NULL,
-  `creep_damage` int(10) DEFAULT NULL,
-  `summon_damage` int(10) DEFAULT NULL,
-  `time_cc_enemy_heroes` int(10) DEFAULT NULL,
-  `healing` int(10) DEFAULT NULL,
-  `self_healing` int(10) DEFAULT NULL,
-  `damage_taken` int(10) DEFAULT NULL,
-  `experience_contribution` int(10) DEFAULT NULL,
-  `town_kills` int(10) DEFAULT NULL,
-  `time_spent_dead` int(10) DEFAULT NULL,
-  `merc_camp_captures` int(10) DEFAULT NULL,
-  `watch_tower_captures` int(10) DEFAULT NULL,
-  `meta_experience` int(10) DEFAULT NULL,
-  `match_award` varchar(10) CHARACTER SET utf8mb4 DEFAULT NULL,
-  `protection_allies` int(11) DEFAULT NULL,
-  `silencing_enemies` int(11) DEFAULT NULL,
-  `rooting_enemies` int(11) DEFAULT NULL,
-  `stunning_enemies` int(11) DEFAULT NULL,
-  `clutch_heals` int(11) DEFAULT NULL,
-  `escapes` int(11) DEFAULT NULL,
-  `vengeance` int(11) DEFAULT NULL,
-  `outnumbered_deaths` int(11) DEFAULT NULL,
-  `teamfight_escapes` int(11) DEFAULT NULL,
-  `teamfight_healing` int(11) DEFAULT NULL,
-  `teamfight_damage_taken` int(11) DEFAULT NULL,
-  `teamfight_hero_damage` int(11) DEFAULT NULL,
-  `multikill` int(11) DEFAULT NULL,
-  `physical_damage` int(11) DEFAULT NULL,
-  `spell_damage` int(11) DEFAULT NULL,
-  `regen_globes` int(11) DEFAULT NULL,
-  `first_to_ten` tinyint(4) DEFAULT NULL,
-  PRIMARY KEY (`replayID`,`battletag`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `scores`
---
 
 LOCK TABLES `scores` WRITE;
 /*!40000 ALTER TABLE `scores` DISABLE KEYS */;

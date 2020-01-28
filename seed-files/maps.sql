@@ -14,25 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `maps`
---
 
-DROP TABLE IF EXISTS `maps`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `maps` (
-  `map_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `short_name` varchar(255) DEFAULT NULL,
-  `type` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`map_id`,`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `maps`
---
 
 LOCK TABLES `maps` WRITE;
 /*!40000 ALTER TABLE `maps` DISABLE KEYS */;

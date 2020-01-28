@@ -14,26 +14,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `season_dates`
---
-
-DROP TABLE IF EXISTS `season_dates`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `season_dates` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `year` int(10) unsigned NOT NULL,
-  `season` double unsigned NOT NULL,
-  `start_date` datetime NOT NULL,
-  `end_date` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `season_dates`
---
 
 LOCK TABLES `season_dates` WRITE;
 /*!40000 ALTER TABLE `season_dates` DISABLE KEYS */;

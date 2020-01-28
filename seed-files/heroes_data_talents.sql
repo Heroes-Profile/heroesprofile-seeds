@@ -14,40 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `heroes_data_talents`
---
 
-DROP TABLE IF EXISTS `heroes_data_talents`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `heroes_data_talents` (
-  `talent_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `hero_name` varchar(50) NOT NULL,
-  `short_name` varchar(50) NOT NULL,
-  `attribute_id` varchar(10) NOT NULL,
-  `title` varchar(50) NOT NULL,
-  `talent_name` varchar(100) NOT NULL,
-  `description` varchar(500) NOT NULL,
-  `status` varchar(45) DEFAULT 'playable',
-  `hotkey` varchar(100) NOT NULL,
-  `cooldown` varchar(10) NOT NULL,
-  `mana_cost` varchar(10) NOT NULL,
-  `sort` varchar(10) NOT NULL,
-  `level` int(11) NOT NULL,
-  `icon` varchar(100) NOT NULL,
-  `required_talent_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`talent_id`,`hero_name`,`title`,`talent_name`,`level`),
-  UNIQUE KEY `Unique` (`hero_name`,`title`,`talent_name`,`level`),
-  KEY `name` (`hero_name`) USING BTREE,
-  KEY `attribute_id` (`attribute_id`) USING BTREE,
-  KEY `heroTitleTalent` (`hero_name`,`title`,`talent_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=3807 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `heroes_data_talents`
---
 
 LOCK TABLES `heroes_data_talents` WRITE;
 /*!40000 ALTER TABLE `heroes_data_talents` DISABLE KEYS */;

@@ -14,32 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `master_games_played_data`
---
 
-DROP TABLE IF EXISTS `master_games_played_data`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `master_games_played_data` (
-  `type_value` int(11) NOT NULL,
-  `season` double NOT NULL,
-  `game_type` tinyint(4) unsigned NOT NULL,
-  `blizz_id` int(11) unsigned NOT NULL,
-  `region` tinyint(3) unsigned NOT NULL,
-  `win` int(11) DEFAULT NULL,
-  `loss` int(11) DEFAULT NULL,
-  `games_played` int(11) DEFAULT NULL,
-  PRIMARY KEY (`type_value`,`season`,`game_type`,`blizz_id`,`region`),
-  KEY `games_played` (`games_played`),
-  KEY `1` (`season`,`game_type`,`games_played`),
-  KEY `primaryMinusBlizzID` (`type_value`,`season`,`game_type`,`region`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `master_games_played_data`
---
 
 LOCK TABLES `master_games_played_data` WRITE;
 /*!40000 ALTER TABLE `master_games_played_data` DISABLE KEYS */;

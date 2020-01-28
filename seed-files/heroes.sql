@@ -14,34 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `heroes`
---
 
-DROP TABLE IF EXISTS `heroes`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `heroes` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
-  `short_name` varchar(32) CHARACTER SET utf8mb4 NOT NULL,
-  `alt_name` varchar(45) DEFAULT NULL,
-  `role` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `new_role` varchar(45) DEFAULT NULL,
-  `type` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `release_date` datetime DEFAULT NULL,
-  `rework_date` datetime DEFAULT NULL,
-  `attribute_id` char(4) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `Hero` (`name`),
-  KEY `heroes_name_index` (`name`(191)),
-  KEY `heroes_shortcut_index` (`attribute_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=89 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `heroes`
---
 
 LOCK TABLES `heroes` WRITE;
 /*!40000 ALTER TABLE `heroes` DISABLE KEYS */;

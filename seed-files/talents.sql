@@ -14,30 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `talents`
---
 
-DROP TABLE IF EXISTS `talents`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `talents` (
-  `replayID` int(11) unsigned NOT NULL,
-  `battletag` int(11) NOT NULL,
-  `level_one` int(11) DEFAULT NULL,
-  `level_four` int(11) DEFAULT NULL,
-  `level_seven` int(11) DEFAULT NULL,
-  `level_ten` int(11) DEFAULT NULL,
-  `level_thirteen` int(11) DEFAULT NULL,
-  `level_sixteen` int(11) DEFAULT NULL,
-  `level_twenty` int(11) DEFAULT NULL,
-  PRIMARY KEY (`replayID`,`battletag`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `talents`
---
 
 LOCK TABLES `talents` WRITE;
 /*!40000 ALTER TABLE `talents` DISABLE KEYS */;

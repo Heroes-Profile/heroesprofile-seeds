@@ -14,26 +14,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `league_breakdowns`
---
-
-DROP TABLE IF EXISTS `league_breakdowns`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `league_breakdowns` (
-  `type_role_hero` int(11) NOT NULL,
-  `game_type` tinyint(4) NOT NULL,
-  `league_tier` tinyint(4) NOT NULL,
-  `min_mmr` double DEFAULT NULL,
-  PRIMARY KEY (`type_role_hero`,`game_type`,`league_tier`),
-  KEY `min_mmr` (`min_mmr`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `league_breakdowns`
---
 
 LOCK TABLES `league_breakdowns` WRITE;
 /*!40000 ALTER TABLE `league_breakdowns` DISABLE KEYS */;

@@ -14,35 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `global_hero_matchups_enemy`
---
 
-DROP TABLE IF EXISTS `global_hero_matchups_enemy`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `global_hero_matchups_enemy` (
-  `game_version` varchar(45) NOT NULL,
-  `game_type` tinyint(4) NOT NULL,
-  `league_tier` tinyint(4) NOT NULL,
-  `hero_league_tier` tinyint(4) NOT NULL DEFAULT '0',
-  `role_league_tier` tinyint(4) NOT NULL DEFAULT '0',
-  `game_map` tinyint(4) NOT NULL,
-  `hero_level` int(10) unsigned NOT NULL DEFAULT '0',
-  `hero` tinyint(4) NOT NULL,
-  `enemy` tinyint(4) NOT NULL,
-  `mirror` tinyint(4) NOT NULL DEFAULT '0',
-  `region` int(11) NOT NULL,
-  `win_loss` tinyint(4) NOT NULL,
-  `games_played` int(11) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`game_version`,`game_type`,`league_tier`,`hero_league_tier`,`role_league_tier`,`game_map`,`hero_level`,`hero`,`enemy`,`mirror`,`region`,`win_loss`),
-  KEY `primary_withHero` (`game_version`,`game_type`,`hero`,`league_tier`,`hero_league_tier`,`role_league_tier`,`game_map`,`hero_level`,`enemy`,`mirror`,`region`,`win_loss`,`games_played`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `global_hero_matchups_enemy`
---
 
 LOCK TABLES `global_hero_matchups_enemy` WRITE;
 /*!40000 ALTER TABLE `global_hero_matchups_enemy` DISABLE KEYS */;

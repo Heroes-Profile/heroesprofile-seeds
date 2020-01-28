@@ -14,25 +14,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `heroes_translations`
---
-
-DROP TABLE IF EXISTS `heroes_translations`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `heroes_translations` (
-  `name` varchar(45) COLLATE utf8_bin NOT NULL,
-  `short_name` varchar(45) COLLATE utf8_bin NOT NULL,
-  `translation` varchar(45) COLLATE utf8_bin NOT NULL,
-  `attribute_id` varchar(45) COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`name`,`short_name`,`translation`,`attribute_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `heroes_translations`
---
 
 LOCK TABLES `heroes_translations` WRITE;
 /*!40000 ALTER TABLE `heroes_translations` DISABLE KEYS */;

@@ -14,23 +14,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `league_tiers`
---
-
-DROP TABLE IF EXISTS `league_tiers`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `league_tiers` (
-  `tier_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) CHARACTER SET latin1 NOT NULL,
-  PRIMARY KEY (`tier_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `league_tiers`
---
 
 LOCK TABLES `league_tiers` WRITE;
 /*!40000 ALTER TABLE `league_tiers` DISABLE KEYS */;

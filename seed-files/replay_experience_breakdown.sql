@@ -14,31 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `replay_experience_breakdown`
---
 
-DROP TABLE IF EXISTS `replay_experience_breakdown`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `replay_experience_breakdown` (
-  `replayID` int(11) NOT NULL,
-  `team` tinyint(4) NOT NULL,
-  `team_level` int(11) NOT NULL,
-  `timestamp` varchar(50) NOT NULL,
-  `structureXP` double DEFAULT NULL,
-  `creepXP` double DEFAULT NULL,
-  `heroXP` double DEFAULT NULL,
-  `minionXP` double DEFAULT NULL,
-  `trickXP` double DEFAULT NULL,
-  `totalXP` double DEFAULT NULL,
-  PRIMARY KEY (`replayID`,`team`,`team_level`,`timestamp`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `replay_experience_breakdown`
---
 
 LOCK TABLES `replay_experience_breakdown` WRITE;
 /*!40000 ALTER TABLE `replay_experience_breakdown` DISABLE KEYS */;

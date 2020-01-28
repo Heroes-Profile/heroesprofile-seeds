@@ -14,26 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `replay_bans`
---
 
-DROP TABLE IF EXISTS `replay_bans`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `replay_bans` (
-  `ban_id` int(11) NOT NULL AUTO_INCREMENT,
-  `replayID` int(11) NOT NULL,
-  `team` tinyint(3) unsigned NOT NULL,
-  `hero` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`ban_id`),
-  KEY `index` (`replayID`,`team`,`hero`)
-) ENGINE=InnoDB AUTO_INCREMENT=45240210 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `replay_bans`
---
 
 LOCK TABLES `replay_bans` WRITE;
 /*!40000 ALTER TABLE `replay_bans` DISABLE KEYS */;

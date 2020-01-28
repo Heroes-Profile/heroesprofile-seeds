@@ -14,28 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `voice_lines`
---
 
-DROP TABLE IF EXISTS `voice_lines`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
- SET character_set_client = utf8mb4 ;
-CREATE TABLE `voice_lines` (
-  `voice_lines_id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) DEFAULT NULL,
-  `hyperlink_id` varchar(255) DEFAULT NULL,
-  `attribute_id` varchar(45) DEFAULT NULL,
-  `release_date` datetime DEFAULT NULL,
-  PRIMARY KEY (`voice_lines_id`),
-  KEY `title` (`title`),
-  KEY `attribute_id` (`attribute_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=888 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `voice_lines`
---
 
 LOCK TABLES `voice_lines` WRITE;
 /*!40000 ALTER TABLE `voice_lines` DISABLE KEYS */;

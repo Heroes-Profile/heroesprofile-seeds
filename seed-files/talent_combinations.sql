@@ -14,32 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `talent_combinations`
---
 
-DROP TABLE IF EXISTS `talent_combinations`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `talent_combinations` (
-  `talent_combination_id` int(11) NOT NULL AUTO_INCREMENT,
-  `hero` int(11) DEFAULT NULL,
-  `level_one` int(11) DEFAULT NULL,
-  `level_four` int(11) DEFAULT NULL,
-  `level_seven` int(11) DEFAULT NULL,
-  `level_ten` int(11) DEFAULT NULL,
-  `level_thirteen` int(11) DEFAULT NULL,
-  `level_sixteen` int(11) DEFAULT NULL,
-  `level_twenty` int(11) DEFAULT NULL,
-  PRIMARY KEY (`talent_combination_id`),
-  UNIQUE KEY `Unique` (`hero`,`level_one`,`level_four`,`level_seven`,`level_ten`,`level_thirteen`,`level_sixteen`,`level_twenty`),
-  KEY `index` (`hero`,`level_twenty`)
-) ENGINE=InnoDB AUTO_INCREMENT=253772 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPRESSED;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `talent_combinations`
---
 
 LOCK TABLES `talent_combinations` WRITE;
 /*!40000 ALTER TABLE `talent_combinations` DISABLE KEYS */;
